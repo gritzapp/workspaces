@@ -52,7 +52,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v6
         with:
-          images: ${{ env.REGISTRY }}/gritz-workspace-debian
+          images: ${{ env.REGISTRY }}/workspace-debian
           tags: |
             type=raw,value=latest
             type=raw,value=${{ steps.tags.outputs.date }}
@@ -91,7 +91,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v6
         with:
-          images: ${{ env.REGISTRY }}/gritz-workspace-mise
+          images: ${{ env.REGISTRY }}/workspace-mise
           tags: |
             type=raw,value=latest
             type=raw,value=${{ needs.debian.outputs.date }}
@@ -106,7 +106,7 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          build-contexts: gritz-workspace-debian=docker-image://${{ env.REGISTRY }}/gritz-workspace-debian:${{ needs.debian.outputs.sha }}
+          build-contexts: workspace-debian=docker-image://${{ env.REGISTRY }}/workspace-debian:${{ needs.debian.outputs.sha }}
           # The mise install layer never changes textually, so a cached
           # layer would pin mise at whatever version the first build fetched.
           no-cache: true
