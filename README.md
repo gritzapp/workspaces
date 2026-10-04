@@ -1,4 +1,4 @@
-# gritz examples
+# gritz workspaces
 
 Example configuration and workspace images for [gritz](https://github.com/gritzapp/gritz).
 
