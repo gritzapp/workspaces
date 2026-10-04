@@ -23,9 +23,9 @@ pull-through registry cache.
 
 [images/](images/) builds the general-purpose workspace images the examples use:
 
-- `ghcr.io/gritzapp/gritz-workspace-debian`: Debian with common build tools and
+- `ghcr.io/gritzapp/workspace-debian`: Debian with common build tools and
   the Claude Code, Codex, Copilot and Cursor CLIs.
-- `ghcr.io/gritzapp/gritz-workspace-mise`: the Debian image plus
+- `ghcr.io/gritzapp/workspace-mise`: the Debian image plus
   [mise](https://mise.jdx.dev/).
 
 The images do not contain gritz: the runner copies its own driver binary into
